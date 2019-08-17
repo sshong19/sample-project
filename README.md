@@ -31,6 +31,21 @@ Note: You're encouraged to show your work by including multiple commits - we'll 
 ## Tasks
 
 1. [Implement Responsive Design](/tasks/01-responsive-design.md)
+..[ ] Base SCSS
+... [ ] Global font style
+... [ ] Variable for colors and font-sizes
+..[ ] Create new components
+....[ ] Header component
+..[ ] Create SCSS modules for each components in bottom-top order
+....[ ] Header.js
+....[ ] ProductItem.js
+....[ ] ProductList.js
+....[ ] ProductsContainer.js
+....[ ] Product.js
+....[ ] Cart.js
+....[ ] CartContainer.js
+....[ ] App.js 
+..[ ] Fix any breaks within the application
 2. [Enhance Cart Functionality](/tasks/02-cart-enhancements.md)
 3. [Hook Up Product API](/tasks/03-product-api.md)
 
