@@ -31,9 +31,9 @@ Note: You're encouraged to show your work by including multiple commits - we'll 
 ## Tasks
 
 1. [Implement Responsive Design](/tasks/01-responsive-design.md)
-..[ ] Base SCSS
-... [ ] Global font style
-... [ ] Variable for colors and font-sizes
+..[x] Base SCSS
+... [x] Global font style
+... [x] Variable for colors and font-sizes
 ..[ ] Create new components
 ....[ ] Header component
 ..[ ] Create SCSS modules for each components in bottom-top order
