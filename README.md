@@ -34,17 +34,17 @@ Note: You're encouraged to show your work by including multiple commits - we'll 
 ..[x] Base SCSS
 ... [x] Global font style
 ... [x] Variable for colors and font-sizes
-..[ ] Create new components
-....[ ] Header component
+..[x] Create new components
+....[x] Header component
 ..[ ] Create SCSS modules for each components in bottom-top order
-....[ ] Header.js
+....[ ] App.js 
+....[x] Header.js
 ....[ ] ProductItem.js
 ....[ ] ProductList.js
 ....[ ] ProductsContainer.js
 ....[ ] Product.js
 ....[ ] Cart.js
 ....[ ] CartContainer.js
-....[ ] App.js 
 ..[ ] Fix any breaks within the application
 2. [Enhance Cart Functionality](/tasks/02-cart-enhancements.md)
 3. [Hook Up Product API](/tasks/03-product-api.md)
