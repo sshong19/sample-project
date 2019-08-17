@@ -7,7 +7,7 @@ import Header from './Header';
 
 const App = () => (
   <div>
-    <Header />
+    <Header title={"Acme Store"} />
     <hr className={styles.Seperator} />
     <ProductsContainer />
     <hr className={styles.Seperator} />
