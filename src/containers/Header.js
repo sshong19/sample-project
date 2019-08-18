@@ -15,7 +15,7 @@ const Header = ({title, quantity, toggleCartPopup}) => {
     return(
         <div className={styles.HeaderContainer}>
             <h1 className={styles.Title}>{title}</h1>
-            <CartLink onCartClicked={toggleCartPopup}/>
+            <CartLink quantity={quantity} onCartClicked={toggleCartPopup}/>
         </div>
     )
 }
