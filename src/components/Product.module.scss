@@ -1,0 +1,93 @@
+@import '../scss/variables';
+@import '../scss/mixins';
+
+.Product {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.Image {
+    width: 40.1%;
+    @include respond(phone){
+        width: 100%;
+    }
+    img {
+        width: 100%;
+    }
+}
+
+.Description {
+    position: relative;
+    width: 59%;
+    padding: 3% 5%;
+    @include respond(phone){
+        width: 100%;
+    }
+}
+
+.Info {
+    clear: both;
+}
+
+.Title {
+    display: inline-block;
+    margin: 0;
+    font-weight: 400;
+    width: 50%;
+}
+
+.Price {
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+    font-weight: 100;
+}
+
+.Remaining {
+    font-size: 11px;
+    font-family: 'Helvetica Neue', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #9b9b9b;
+}
+
+.ButtonContainer {
+    height: 50%; 
+    position: relative;
+    @include respond(phone){
+        position: static;
+        padding: 3% 0;
+    }
+}
+
+.Button {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 20.5px;
+    padding: 1em 2.17em;
+    border-color: $default-button-primary;
+    background-color: $default-button-primary;
+    color: white;
+    text-transform: uppercase;
+
+    @include respond(phone){
+        position: static;
+    }
+    
+    &:hover {
+        cursor: pointer;
+        border-color: $hover-button-primary;
+        background-color: $hover-button-primary; 
+    }
+    &:focus {
+        outline: none;
+    }
+    &:disabled {
+        opacity: .5;
+    }
+}
+
