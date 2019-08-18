@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { CartIcon } from '../assets/icons/CartIcon';
 import { toggleCartPopup } from '../actions';
 import { getTotalQuantity } from '../reducers';
+import CartLink from '../components/CartLink';
 /**
  * Header
  * @param {title, String}
@@ -14,7 +15,7 @@ const Header = ({title, quantity, toggleCartPopup}) => {
     return(
         <div className={styles.HeaderContainer}>
             <h1 className={styles.Title}>{title}</h1>
-            <a className={`${styles.CartSummary} ${quantity && styles.Active}`} onClick={toggleCartPopup}><CartIcon/> {quantity ? quantity : "Your cart is empty"}</a>
+            <CartLink onCartClicked={toggleCartPopup}/>
         </div>
     )
 }

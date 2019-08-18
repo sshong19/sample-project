@@ -44,7 +44,7 @@ Note: You're encouraged to show your work by including multiple commits - we'll 
         - [ ] CartContainer.js
     - [ ] Create new reducers/actions for popup states
         - [x] popup.js
-        - [ ] popup.spec.js
+        - [x] popup.spec.js
     - [ ] Make edits to components
         - [x] ProductItem.js
         - [x] ProductList.js

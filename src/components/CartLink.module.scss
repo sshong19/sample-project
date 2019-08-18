@@ -1,0 +1,19 @@
+@import '../scss/variables';
+
+.CartSummary {
+    order: 2;
+    font-family: 'Helvetica', sans-serif;
+    color: $default-text-link;
+    font-size: 14px;
+    margin-left: auto;
+    float: right;
+    &:hover {
+        color: $hover-text-link;
+        fill: currentColor;
+        cursor: pointer;
+    }
+}
+
+.Active {
+    color: $hover-text-link;
+}
