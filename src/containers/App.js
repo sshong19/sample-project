@@ -6,7 +6,7 @@ import CartContainer from './CartContainer'
 import Header from './Header';
 
 const App = () => (
-  <div>
+  <div className={styles.AppContainer}>
     <Header title={"Acme Store"} />
     <hr className={styles.Seperator} />
     <ProductsContainer />

@@ -37,7 +37,7 @@ Note: You're encouraged to show your work by including multiple commits - we'll 
     - [x] Create new components
         - [x] Header component
     - [ ] Create SCSS modules for each components in bottom-top order
-        - [ ] App.js 
+        - [x] App.js 
         - [x] Header.js
         - [ ] ProductItem.js
         - [ ] ProductList.js
