@@ -10,7 +10,6 @@ const App = () => (
     <Header title={"Acme Store"} />
     <hr className={styles.Seperator} />
     <ProductsContainer />
-    <hr className={styles.Seperator} />
     <CartContainer />
   </div>
 )

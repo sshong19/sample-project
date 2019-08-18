@@ -5,6 +5,7 @@ import {
 } from '../constants/ActionTypes'
 
 const initialState = {
+  isCartPopup: false,
   addedIds: [],
   quantityById: {}
 }
