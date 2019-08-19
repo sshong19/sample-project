@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styles from './Product.module.scss'
 import { getImage } from '../api/image';
 
-const Product = ({ isCartProduct, price, inventory, title, onAddToCartClicked}) => {
+const Product = ({ isCartProduct, price, inventory, title, onAddToCartClicked, onRemove}) => {
 
   const {Product, Image, Description, Info, Title, Price, LeftAlign, Remaining, ButtonContainer, RemoveButton, Button, ClearBorderRadius, CartImage, CartDescription} = styles; 
   return(
@@ -16,7 +16,7 @@ const Product = ({ isCartProduct, price, inventory, title, onAddToCartClicked}) 
           {!isCartProduct && <p className={Remaining}>{inventory} remaining</p>}
         </div>
         <div className={ButtonContainer}>
-          {isCartProduct ? <button className={RemoveButton}>Remove</button> : 
+          {isCartProduct ? <button className={RemoveButton} onClick={onRemove}>Remove</button> : 
           <button
             className={Button}
             onClick={onAddToCartClicked}
@@ -34,7 +34,8 @@ Product.propTypes = {
   inventory: PropTypes.number,
   title: PropTypes.string,
   isCartProduct: PropTypes.bool,
-  onAddToCartClicked: PropTypes.func
+  onAddToCartClicked: PropTypes.func,
+  onRemove: PropTypes.func
 }
 
 export default Product

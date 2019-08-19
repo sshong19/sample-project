@@ -34,6 +34,10 @@ export const removeFromCart = productId => (dispatch, getState) => {
   }
 }
 
+export const removeProductFromCart = (productId, quantity) => (dispatch) => {
+  dispatch({type: types.REMOVE_PRODUCT_FROM_CART, productId, quantity})
+}
+
 // Toggles cart's popup state.
 export const toggleCartPopup = () => dispatch => dispatch({type: types.TOGGLE_CART})
 

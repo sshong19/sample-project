@@ -4,7 +4,7 @@ import Product from './Product'
 import styles from './Cart.module.scss';
 import { CartIconLarge } from '../assets/icons/CartIconLarge';
 
-const Cart  = ({ products, total, onCheckoutClicked, onAdd, onRemove}) => {
+const Cart  = ({ products, total, onCheckoutClicked, onAdd, onRemove, onProductRemove}) => {
   const {
     CartBox, CartSummary, Title, Warning, 
     WarningContainer, ProductContainer, Button, ButtonContainer, 
@@ -14,13 +14,14 @@ const Cart  = ({ products, total, onCheckoutClicked, onAdd, onRemove}) => {
   const hasProducts = products.length > 0
   const nodes = hasProducts ? (
     products.map(product =>
-      <div style={{marginBottom: 20}}>
+      <div key={product.id} style={{marginBottom: 20}}>
         <Product
           isCartProduct={true}
           title={product.title}
           price={product.price}
           quantity={product.quantity}
           key={product.id}
+          onRemove={() => onProductRemove(product.id, product.quantity)}
         />
         <div className={AmountContainer}>
             <div className={`${AmountButton} ${LeftBorderRadius}`} onClick={() => onRemove(product.id)}>&#8722;</div>
@@ -65,7 +66,11 @@ const Cart  = ({ products, total, onCheckoutClicked, onAdd, onRemove}) => {
 Cart.propTypes = {
   products: PropTypes.array,
   total: PropTypes.string,
-  onCheckoutClicked: PropTypes.func
+  onCheckoutClicked: PropTypes.func,
+  onProductRemove: PropTypes.func,
+  onAdd: PropTypes.func,
+  onRemove: PropTypes.func,
+  onProductRemove: PropTypes.func
 }
 
 export default Cart
