@@ -36,20 +36,20 @@ Note: You're encouraged to show your work by including multiple commits - we'll 
         - [x] Variable for colors and font-sizes
     - [x] Create new components
         - [x] Header component
-    - [ ] Create SCSS modules for each components
+    - [x] Create SCSS modules for each components
         - [x] App.js 
         - [x] Header.js
         - [x] Product.js
-        - [ ] Cart.js
-        - [ ] CartContainer.js
+        - [x] Cart.js
+        - [x] CartContainer.js
     - [x] Create new reducers/actions for popup states
         - [x] popup.js
         - [x] popup.spec.js
-    - [ ] Make edits to components
+    - [x] Make edits to components
         - [x] ProductItem.js
         - [x] ProductList.js
         - [x] ProductsContainer.js
-    - [ ] Fix any breaks within the application
+    - [x] Fix any breaks within the application
 2. [Enhance Cart Functionality](/tasks/02-cart-enhancements.md)
 3. [Hook Up Product API](/tasks/03-product-api.md)
 
