@@ -4,7 +4,7 @@ import Product from './Product'
 import styles from './Cart.module.scss';
 import { CartIconLarge } from '../assets/icons/CartIconLarge';
 
-const Cart  = ({ products, total, onCheckoutClicked }) => {
+const Cart  = ({ products, total, onCheckoutClicked, onAdd, onRemove}) => {
   const {
     CartBox, CartSummary, Title, Warning, 
     WarningContainer, ProductContainer, Button, ButtonContainer, 
@@ -23,9 +23,9 @@ const Cart  = ({ products, total, onCheckoutClicked }) => {
           key={product.id}
         />
         <div className={AmountContainer}>
-            <div className={`${AmountButton} ${LeftBorderRadius}`}>&#8722;</div>
-            <div className={Amount}><span>{products.length}</span></div>
-            <div className={`${AmountButton} ${RightBorderRadius}`}>&#43;</div>          
+            <div className={`${AmountButton} ${LeftBorderRadius}`} onClick={() => onRemove(product.id)}>&#8722;</div>
+            <div className={Amount}><span>{product.quantity}</span></div>
+            <div className={`${AmountButton} ${RightBorderRadius}`} onClick={() => onAdd(product.id)}>&#43;</div>          
         </div>
       </div>
     )

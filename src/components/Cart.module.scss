@@ -112,6 +112,10 @@
     width: 33.3%;
     text-align: center;
     background-color: $default-button-secondary;
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
     &:hover {
         cursor: pointer;
     }

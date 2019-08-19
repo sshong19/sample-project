@@ -1,20 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { checkout, toggleCartPopup } from '../actions'
+import { checkout, toggleCartPopup, addToCart, removeFromCart} from '../actions'
 import { getTotal, getCartProducts, getCartPopupState } from '../reducers'
 import Cart from '../components/Cart'
 import { CloseIcon } from '../assets/icons/CloseIcon'
 
-const CartContainer = ({ products, total, checkout, isCart, toggleCartPopup}) => isCart ? (
+const CartContainer = ({ products, total, checkout, isCart, toggleCartPopup, addToCart, removeFromCart}) => isCart ? (
   <div className="overlay">
     <div className="content">
       <span className="close" onClick={toggleCartPopup}><CloseIcon /></span>
       <Cart
-      isCart={isCart}
-      products={products}
-      total={total}
-      onCheckoutClicked={() => checkout(products)} />
+        isCart={isCart}
+        products={products}
+        total={total}
+        onCheckoutClicked={() => checkout(products)} 
+        onAdd={addToCart}
+        onRemove={removeFromCart}
+      />
     </div>
   </div>
 ) : null
@@ -38,5 +41,5 @@ const mapStateToProps = (state) => ({
 
 export default connect(
   mapStateToProps,
-  { checkout, toggleCartPopup }
+  { checkout, toggleCartPopup, addToCart, removeFromCart}
 )(CartContainer)
