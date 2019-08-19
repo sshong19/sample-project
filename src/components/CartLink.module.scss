@@ -1,4 +1,5 @@
 @import '../scss/variables';
+@import '../scss/mixins';
 
 .CartSummary {
     order: 2;
@@ -11,6 +12,11 @@
         color: $hover-text-link;
         fill: currentColor;
         cursor: pointer;
+    }
+    @include respond(phone){
+        margin-left: 0;
+        display: block;
+        width: 100%;
     }
 }
 

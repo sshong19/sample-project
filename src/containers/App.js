@@ -1,14 +1,13 @@
 import React from 'react'
 import '../css/main.css';
-import styles from './App.module.scss';
 import ProductsContainer from './ProductsContainer'
 import CartContainer from './CartContainer'
 import Header from './Header';
 
 const App = () => (
-  <div className={styles.AppContainer}>
+  <div style={{padding: "3.3% 6.6%"}}>
     <Header title={"Acme Store"} />
-    <hr className={styles.Seperator} />
+    <hr className="seperator" />
     <ProductsContainer />
     <CartContainer />
   </div>

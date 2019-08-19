@@ -4,18 +4,23 @@
   padding: 0;
   box-sizing: inherit; }
 
+html {
+  height: 100%; }
+
 body {
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Chivo', sans-serif; }
+  font-family: 'Chivo', sans-serif;
+  background-color: #F7F7F7;
+  min-height: 100%; }
 
-button, button:hover, button:focus {
+button {
   border: none; }
 
-.button:hover {
+button:hover {
   cursor: pointer; }
 
-.button:focus {
+button:focus {
   outline: none; }
 
 .overlay {
@@ -45,7 +50,7 @@ button, button:hover, button:focus {
   @media (max-width: 37.5em) {
     .content {
       width: 100%;
-      height: 100vh;
+      height: 101vh;
       border-radius: 0; } }
 
 .close {
