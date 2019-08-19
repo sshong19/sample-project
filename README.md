@@ -57,6 +57,7 @@ Note: You're encouraged to show your work by including multiple commits - we'll 
     - [x] Impement REMOVE_PRODUCT_FROM_CARt
     - [x] Write tests for above cases 
 3. [Hook Up Product API](/tasks/03-product-api.md)
+    - [ ] Make edits to shop.js and use axios for workco api
 
 You're welcome (but not required) to add any libraries you think would be helpful.
 
