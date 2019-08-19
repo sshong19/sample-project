@@ -1,4 +1,4 @@
-import { getTotal, getCartProducts } from './index'
+import { getTotal, getCartProducts, getCartPopupState } from './index'
 
 describe('selectors', () => {
   describe('getTotal', () => {
@@ -79,6 +79,17 @@ describe('selectors', () => {
           quantity: 1
         }
       ])
+    })
+  })
+
+  describe('getCartPopupState', () => {
+    it('should return state of the cart popup', () => {
+      const state = {
+          popup : {
+            isCart: false
+          }
+      }
+      expect(getCartPopupState(state)).toEqual(false)
     })
   })
 })

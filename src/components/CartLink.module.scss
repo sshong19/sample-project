@@ -1,0 +1,25 @@
+@import '../scss/variables';
+@import '../scss/mixins';
+
+.CartSummary {
+    order: 2;
+    font-family: 'Helvetica', sans-serif;
+    color: $default-text-link;
+    font-size: 14px;
+    margin-left: auto;
+    float: right;
+    &:hover {
+        color: $hover-text-link;
+        fill: currentColor;
+        cursor: pointer;
+    }
+    @include respond(phone){
+        margin-left: 0;
+        display: block;
+        width: 100%;
+    }
+}
+
+.Active {
+    color: $hover-text-link;
+}

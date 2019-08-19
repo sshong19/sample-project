@@ -23,6 +23,9 @@ export const addToCart = productId => (dispatch, getState) => {
   }
 }
 
+// Toggles cart's popup state.
+export const toggleCartPopup = () => dispatch => dispatch({type: types.TOGGLE_CART})
+
 export const checkout = products => (dispatch, getState) => {
   const { cart } = getState()
 

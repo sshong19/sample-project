@@ -17,20 +17,14 @@ const setup = (total, products = []) => {
     actions: actions,
     button: component.find('button'),
     products: component.find(Product),
-    em: component.find('em'),
     p: component.find('p')
   }
 }
 
 describe('Cart component', () => {
-  it('should display total', () => {
-    const { p } = setup('76')
-    expect(p.text()).toMatch(/^Total: \$76/)
-  })
-
   it('should display add some products message', () => {
-    const { em } = setup()
-    expect(em.text()).toMatch(/^Please add some products to cart/)
+    const { p } = setup()
+    expect(p.text()).toMatch("Please add some products to your cart")
   })
 
   it('should disable button', () => {
@@ -51,6 +45,7 @@ describe('Cart component', () => {
     it('should render products', () => {
       const { products } = setup('9.99', product)
       const props = {
+        isCartProduct: true,
         title: product[0].title,
         price: product[0].price,
         quantity: product[0].quantity
