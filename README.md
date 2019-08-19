@@ -1,7 +1,5 @@
 # Work & Co Web Code Assessment
 
-This is a copy of the [Redux Shopping Cart Example](https://github.com/reactjs/redux/tree/master/examples/shopping-cart).
-
 To install dependencies, use the package manager [Yarn](https://yarnpkg.com/en/):
 
 ```
@@ -14,19 +12,25 @@ To start a development server:
 yarn start
 ```
 
-## Setup
+## Approach
+1. Brainstorming
+    - Given three tasks for this assignment, I have created three different branches to keep track of of my progress updates. I have also created a PR with notes for each of them.
+    - In the beginning, I have created a subtask list for each of the tasks to help me guide through the coding process.
+    - Going through [Design.sketch](/assets/Design.sketch), I have written down a list including but not limited to:
+        - Assets I need to export and make, such as [cart icon](/src/assets/icons/CartIcon.js), [close icon](/src/assets/icons/CloseIcon.js), and [images](/src/assets/images/)
+        - New components/containers and tests that I need to write and make edits to, such as [Header](/src/containers/Header.js) and [CartLink](/src/components/CartLink.js)
+        - Which measurements that I need to calculate for the responsive layout
+2. Design Choices
+    - While working the assignments, there were some independent design choices that I needed to make.
+    - I created a [CartLink](/src/components/CartLink.js) component and added a new reducer, which gets the total quantity of items that you have added to cart, in order to display the update as the user adds an item to the cart.
+    - I also made a slight design change in empty cart popup to display the price description even when its empty.
+    - I created a [popup](/src/reducers/popup.js) state in order to manage all the popup states. For now, the application only has a cart popup, but I thought it would be useful when adding more types of popups in the future.
+    - I implemented an [image mapper](/src/api/image.js) which returns an image for corresponding title.
+    - I added a simple [data processor](/src/api/parser.js) which returns a processed data compatible to the application; therefore, you would not need to change all the props later when the api changes.
+    - I mainly used component-based SCSS modules in order to make the component more reuseable and be styled in singleton. However, I have also written a [global scss file](/src/scss/) in order to keep all the base styles, scss variables, and mixins together.
+3. End
+    - Overall I have enjoyed working on the assignment and have some independence in making design choices. If any questions arise while looking through my code, feel free to reach me at sshong@bu.edu. Thank you.
 
-Please create a new, public Github repository where your assessment can be reviewed. We recommend the following steps:
-
-- Create a repository on your personal Github. Make sure the `Initialize this repository with a README` box is unchecked.
-- Visit your new repository. Copy the `…or push an existing repository from the command line` code provided and run it in your terminal in the same directory as this README file. It will look something like this:
-
-```
-git remote add origin git@github.com:my-username/my-assessment.git
-git push -u origin master
-```
-
-Note: You're encouraged to show your work by including multiple commits - we'll be looking through your git history.
 
 ## Tasks
 
@@ -59,7 +63,3 @@ Note: You're encouraged to show your work by including multiple commits - we'll 
 3. [Hook Up Product API](/tasks/03-product-api.md)
     - [x] Make edits to shop.js and use axios for workco api
     - [x] Data parsed correctly for react
-
-You're welcome (but not required) to add any libraries you think would be helpful.
-
-Please also update this README file: we'd love to see notes on your decision-making process, links to the most exciting pieces of code, or anything else that will give us additional context when reviewing your assessment.
