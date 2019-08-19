@@ -41,17 +41,19 @@ const Cart  = ({ products, total, onCheckoutClicked, onAdd, onRemove, onProductR
         <h3 className={Title}>Your cart</h3>
         <hr className="seperator"></hr>
         <div className={hasProducts?  ProductContainer : WarningContainer}>{nodes}</div>
-        <hr className="seperator"></hr>
-        <div className={PaymentSummary}>
-          <span className={Label} style={{paddingBottom: "2.5%"}}>Subtotal</span><span className={Price} style={{paddingBottom: "2.5%"}}>&#36;{total}</span>
-          <span className={Label}>Taxes</span><span className={Price}>&#36;{(total * 0.0807).toFixed(2)}</span>
-        </div>
-        <hr className="seperator"></hr>
-        <div className={PaymentSummary}>
-          <span className={Label}>Total</span><span className={Price}>&#36;{(total * 1.0807).toFixed(2)}</span>
-        </div>
-        </div>
-      <div className={ButtonContainer}>
+        {hasProducts && <div>
+          <hr className="seperator"></hr>
+          <div className={PaymentSummary}>
+            <span className={Label} style={{paddingBottom: "2.5%"}}>Subtotal</span><span className={Price} style={{paddingBottom: "2.5%"}}>&#36;{total}</span>
+            <span className={Label}>Taxes</span><span className={Price}>&#36;{(total * 0.0807).toFixed(2)}</span>
+          </div>
+          <hr className="seperator"></hr>
+          <div className={PaymentSummary}>
+            <span className={Label}>Total</span><span className={Price}>&#36;{(total * 1.0807).toFixed(2)}</span>
+          </div>
+        </div>}
+      </div>
+      {hasProducts && <div className={ButtonContainer}>
          <button 
           className={Button}
           onClick={onCheckoutClicked}
@@ -59,6 +61,7 @@ const Cart  = ({ products, total, onCheckoutClicked, onAdd, onRemove, onProductR
           Checkout
         </button>
       </div>
+      }
     </div>
   )
 }

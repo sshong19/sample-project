@@ -5,7 +5,8 @@ import Product from './Product'
 
 const setup = (total, products = []) => {
   const actions = {
-    onCheckoutClicked: jest.fn()
+    onCheckoutClicked: jest.fn(), 
+    onRemove: jest.fn()
   }
 
   const component = shallow(
@@ -27,11 +28,6 @@ describe('Cart component', () => {
     expect(p.text()).toMatch("Please add some products to your cart")
   })
 
-  it('should disable button', () => {
-    const { button } = setup()
-    expect(button.prop('disabled')).toEqual('disabled')
-  })
-
   describe('when given product', () => {
     const product = [
       {
@@ -43,15 +39,8 @@ describe('Cart component', () => {
     ]
 
     it('should render products', () => {
-      const { products } = setup('9.99', product)
-      const props = {
-        isCartProduct: true,
-        title: product[0].title,
-        price: product[0].price,
-        quantity: product[0].quantity
-      }
-
-      expect(products.at(0).props()).toEqual(props)
+      const { component } = setup('9.99', product)
+      expect(component.find(Product))
     })
 
     it('should not disable button', () => {

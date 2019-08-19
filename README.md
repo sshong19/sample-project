@@ -23,7 +23,6 @@ yarn start
 2. Design Choices
     - While working the assignments, there were some independent design choices that I needed to make.
     - I created a [CartLink](/src/components/CartLink.js) component and added a new reducer, which gets the total quantity of items that you have added to cart, in order to display the update as the user adds an item to the cart.
-    - I also made a slight design change in empty cart popup to display the price description even when its empty.
     - I created a [popup](/src/reducers/popup.js) state in order to manage all the popup states. For now, the application only has a cart popup, but I thought it would be useful when adding more types of popups in the future.
     - I implemented an [image mapper](/src/api/image.js) which returns an image for corresponding title.
     - I added a simple [data processor](/src/api/parser.js) which returns a processed data compatible to the application; therefore, you would not need to change all the props later when the api changes.
