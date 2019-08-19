@@ -19,17 +19,24 @@
     }
 }
 
-.Description {
-    position: relative;
-    width: 59%;
-    padding: 3% 5%;
-    @include respond(phone){
+.CartImage {
+    width: 40.1%;
+    img {
         width: 100%;
     }
 }
 
-.Info {
-    clear: both;
+.CartDescription {
+    width: 59%;
+    padding: 2% 5%;
+}
+
+.Description {
+    width: 59%;
+    padding: 2% 5%;
+    @include respond(phone){
+        width: 100%;
+    }
 }
 
 .Title {
@@ -39,11 +46,25 @@
     width: 50%;
 }
 
+.Info {
+    display: flex;
+    flex-direction: column;
+    text-align: left; 
+}
+
 .Price {
     display: inline-block;
     width: 50%;
     text-align: right;
     font-weight: 100;
+}
+
+.LeftAlign {
+    text-align: left;
+}
+
+.ClearBorderRadius {
+    border-radius: 0;
 }
 
 .Remaining {
@@ -55,18 +76,14 @@
 }
 
 .ButtonContainer {
-    height: 50%; 
-    position: relative;
+    margin-top: 20%;
     @include respond(phone){
-        position: static;
+        margin-top: 0;
         padding: 3% 0;
     }
 }
 
 .Button {
-    position: absolute;
-    left: 0;
-    bottom: 0;
     border-radius: 20.5px;
     padding: 1em 2.17em;
     border-color: $default-button-primary;
@@ -91,3 +108,15 @@
     }
 }
 
+.RemoveButton {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    color: #CC1D39;
+    border: none;
+    &:hover {
+        cursor: pointer;
+    }
+    &:focus {
+        outline: none;
+    }
+}

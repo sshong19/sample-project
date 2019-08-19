@@ -14,6 +14,18 @@ body {
     font-family: 'Chivo', sans-serif
 }
 
+button, button:hover, button:focus {
+    border: none;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button:focus {
+    outline: none;
+}
+
 .overlay {
     position: fixed;
     top: 0;
@@ -36,12 +48,18 @@ body {
     @include absCenter;
     background-color: #FFFFFF;
     border-radius: 14px;
-    padding: 2% 3.25%;
     width: 60.1%;
+    @include respond(phone){
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
 }
 
 .close {
-    float: right; 
+    display: block;
+    text-align: right;
+    padding: 18px 18px 0 0;
     &:hover {
         cursor: pointer;
     }

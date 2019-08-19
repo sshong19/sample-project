@@ -1,16 +1,21 @@
 @import '../scss/mixins';
+@import '../scss/variables';
 
-.Cart {
-    display: flex;
-    flex-direction: column; 
-    height: 63vh;
+.CartSummary {
+    padding: 0 5%;
+    padding-bottom: 0;
+}
+
+.CartBox {
+    height: max-content;
 }
 
 .Title {
     font-weight: bold;
     font-size: 30px;
     letter-spacing: -0.8px;
-    margin: 5% 0; 
+    margin: 0; 
+    margin-bottom: 2%;
 }
 
 .Warning {
@@ -28,7 +33,108 @@
 }
 
 .WarningContainer {
-    flex: auto;
+    min-height: 30vh;
     position: relative;
     margin: 0 auto;
+}
+
+.ProductContainer {
+    max-height: 33vh;
+    position: relative;
+    overflow: auto;
+    @include respond(phone){
+        max-height: 50vh;
+    } 
+}
+
+.PaymentSummary {
+    padding: 3% 0;
+}
+
+.Label {
+    display: inline-block;
+    width: 50%;
+}
+
+.Price {
+    display: inline-block;
+    font-weight: 100;
+    width: 50%;
+    text-align: right;
+}
+
+.Button {
+    border-radius: 20.5px;
+    padding: 1em 2.17em;
+    border-color: $default-button-primary;
+    background-color: $default-button-primary;
+    color: white;
+    text-transform: uppercase;
+    width: 100%;
+    
+    &:hover {
+        border-color: $hover-button-primary;
+        background-color: $hover-button-primary; 
+    }
+
+    &:disabled {
+        opacity: .5;
+    }
+    @include respond(phone){
+        padding: 5%;
+        font-size: 15px;
+        border-radius: 0;
+    }
+}
+
+.ButtonContainer {
+    padding: 3%; 
+    @include respond(phone){
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.AmountContainer {
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    border-radius: 200px;
+    border: 1px solid $default-button-secondary;
+}
+
+.AmountButton {
+    font-size: 30px;
+    color: #8E939C;
+    display: inline-block;
+    width: 33.3%;
+    text-align: center;
+    background-color: $default-button-secondary;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.LeftBorderRadius {
+    border-radius: 200px 0 0 200px;     
+}
+
+.RightBorderRadius {
+    border-radius: 0 200px 200px 0;
+}
+
+.Amount {
+    position: relative;
+    font-size: 15px; 
+    display: inline-block;
+    text-align: center;
+    width: 33.3%;
+    span {
+        @include absCenter;
+        display: block;
+        margin: auto;
+        vertical-align: middle;
+    }
 }

@@ -4,7 +4,7 @@ import {
 
 // Manages popup states for cart, and etc...
 const initialState = {
-    isCart: true
+    isCart: false
 }
 
 // Gets global popup state.
