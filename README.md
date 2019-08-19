@@ -51,6 +51,11 @@ Note: You're encouraged to show your work by including multiple commits - we'll 
         - [x] ProductsContainer.js
     - [x] Fix any breaks within the application
 2. [Enhance Cart Functionality](/tasks/02-cart-enhancements.md)
+    - [x] Reuse ADD_TO_CART for incrementing quantity for the item in the cart
+    - [x] Implement REMOVE_FROM_CART 
+    - [x] Write tests for above cases
+    - [x] Impement REMOVE_PRODUCT_FROM_CARt
+    - [x] Write tests for above cases 
 3. [Hook Up Product API](/tasks/03-product-api.md)
 
 You're welcome (but not required) to add any libraries you think would be helpful.
