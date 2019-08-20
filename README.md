@@ -25,6 +25,7 @@ yarn start
     - I created a [CartLink](/src/components/CartLink.js) component and added a new reducer, which gets the total quantity of items that you have added to cart, in order to display the update as the user adds an item to the cart.
     - I created a [popup](/src/reducers/popup.js) state in order to manage all the popup states. For now, the application only has a cart popup, but I thought it would be useful when adding more types of popups in the future.
     - I implemented an [image mapper](/src/api/image.js) which returns an image for corresponding title.
+    - I did not add an update button in Cart for UX purpose because it would automatically update the edits that the user has made to the cart. 
     - I added a simple [data processor](/src/api/parser.js) which returns a processed data compatible to the application; therefore, you would not need to change all the props later when the api changes.
     - I mainly used component-based SCSS modules in order to make the component more reuseable and be styled in singleton. However, I have also written a [global scss file](/src/scss/) in order to keep all the base styles, scss variables, and mixins together.
 3. End
