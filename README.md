@@ -1,4 +1,4 @@
-# Work & Co Web Code Assessment
+# Sample React/Redux Project
 
 To install dependencies, use the package manager [Yarn](https://yarnpkg.com/en/):
 
