@@ -27,10 +27,7 @@ yarn start
     - I implemented an [image mapper](/src/api/image.js) which returns an image for corresponding title.
     - I did not add an update button in Cart for UX purpose because it would automatically update the edits that the user has made to the cart. 
     - I added a simple [data processor](/src/api/parser.js) which returns a processed data compatible to the application; therefore, you would not need to change all the props later when the api changes.
-    - I mainly used component-based SCSS modules in order to make the component more reuseable and be styled in singleton. However, I have also written a [global scss file](/src/scss/) in order to keep all the base styles, scss variables, and mixins together.
-3. End
-    - Overall I have enjoyed working on the assignment and have some independence in making design choices. If any questions arise while looking through my code, feel free to reach me at sshong@bu.edu. Thank you.
-
+    - I mainly used component-based SCSS modules in order to make the component more reuseable and be styled in singleton. However, I have also written a [global scss file](/src/scss/) in order to keep all the base styles, scss variables, and mixins
 
 ## Tasks
 
